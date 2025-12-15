@@ -1,0 +1,93 @@
+@use "../../global" as g;
+
+/*!
+page > message
+------------------------------
+*/
+.p-message {
+  padding-block: 80px;
+
+  @include g.mq(lg) {
+    padding-block: 120px;
+  }
+}
+
+.p-message__inner {
+  @include g.mq(lg) {
+    display: flex;
+    gap: 56px;
+  }
+}
+
+.p-message__image-amount {
+  aspect-ratio: 340 / 228;
+  overflow: hidden;
+  border-radius: 0 0 0 32px;
+
+  @include g.mq(lg) {
+    min-width: 400px;
+    aspect-ratio: 400 / 533;
+    border-radius: 0 0 0 56px;
+  }
+}
+
+.p-message__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-message__body {
+  margin-top: 32px;
+
+  @include g.mq(lg) {
+    margin-top: 0;
+  }
+}
+
+.p-message__title {
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 32px;
+  }
+
+  .emphasis {
+    color: var(--color-font-primary);
+  }
+}
+
+.p-message__text {
+  margin-top: 16px;
+
+  @include g.mq() {
+    margin-top: 24px;
+  }
+
+  p:not(:first-child) {
+    margin-top: 12px;
+  }
+}
+
+.p-message__signature {
+  margin-top: 32px;
+
+  @include g.mq() {
+    margin-top: 40px;
+  }
+}
+
+.p-message__position {
+}
+
+.p-message__name {
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 32px;
+  }
+}

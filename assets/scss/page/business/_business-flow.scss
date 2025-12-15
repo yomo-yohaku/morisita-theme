@@ -1,0 +1,98 @@
+@use "../../global" as g;
+
+/*!
+page > business > business-flow
+------------------------------
+*/
+.p-business-flow {
+  margin-top: 80px;
+}
+
+.p-business-flow__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-business-flow__title-en {
+  font-family: var(--font-family-en);
+  font-size: 16px;
+  line-height: 1.18;
+  color: var(--color-font-primary);
+
+  @include g.mq() {
+    font-size: 20px;
+  }
+}
+
+.p-business-flow__title-ja {
+  font-size: 24px;
+  line-height: 1.45;
+
+  @include g.mq() {
+    font-size: 32px;
+  }
+}
+
+.p-business-flow__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 24px;
+
+  @include g.mq() {
+    margin-top: 32px;
+  }
+}
+
+.p-business-flow__item {
+  display: flex;
+  gap: 16px;
+
+  @include g.mq() {
+    gap: 32px;
+  }
+}
+
+.p-business-flow__image {
+  width: 100px;
+  aspect-ratio: 1;
+
+  @include g.mq() {
+    width: 150px;
+  }
+}
+
+.p-business-flow__body {
+  flex: 1;
+}
+
+.p-business-flow__body-title-num {
+  font-family: var(--font-family-en);
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--color-font-primary);
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 24px;
+  }
+}
+
+.p-business-flow__body-title-text {
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 24px;
+  }
+}
+
+.p-business-flow__body-text {
+  margin-top: 3px;
+  line-height: 1.4;
+
+  @include g.mq() {
+    margin-top: 10px;
+  }
+}

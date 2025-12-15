@@ -1,0 +1,26 @@
+@use "top/top-kv";
+@use "top/top-news";
+@use "top/top-business";
+@use "top/top-product";
+@use "top/top-info";
+
+@use "company/company-common";
+
+@use "business/business-common";
+@use "business/business-problem";
+@use "business/business-feature";
+@use "business/business-flow";
+
+@use "product/product-common";
+@use "product/product-detail";
+
+@use "access/access-common";
+
+@use "message/message-common";
+
+@use "contact/contact-common";
+
+@use "news/news-common";
+@use "news/news-detail";
+
+@use "privacy/privacy-common";

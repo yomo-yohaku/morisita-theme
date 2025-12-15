@@ -1,0 +1,55 @@
+@use "../../global" as g;
+
+/*!
+page > privacy
+------------------------------
+*/
+.p-privacy {
+  padding: 64px 0;
+
+  @include g.mq() {
+    padding: 96px 0;
+  }
+}
+
+.p-privacy__wrap {
+}
+
+.p-privacy__section {
+  margin-top: 40px;
+
+  @include g.mq() {
+    margin-top: 48px;
+  }
+}
+
+.p-privacy__title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 22px;
+  }
+}
+
+.p-privacy__body {
+  margin-top: 16px;
+
+  .list {
+    padding-left: 22px;
+
+    @include g.mq() {
+      padding-left: 26px;
+    }
+
+    li {
+      padding-top: 1px;
+      list-style-type: decimal;
+
+      @include g.mq() {
+        padding-top: 0.09px;
+      }
+    }
+  }
+}

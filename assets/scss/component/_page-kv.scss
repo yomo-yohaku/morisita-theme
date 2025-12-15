@@ -1,0 +1,163 @@
+@use "../global" as g;
+
+/*!
+component > page-kv
+------------------------------
+*/
+.c-page-kv {
+  padding-block: 120px 40px;
+  background: var(--color-bg-lightest-blue);
+
+  @include g.mq() {
+    padding-block: 208px 0;
+  }
+}
+
+.c-page-kv__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+
+  @include g.mq() {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  @include g.mq(lg) {
+    gap: 56px;
+  }
+}
+
+.c-page-kv__title-wrap {
+  order: 2;
+
+  @include g.mq() {
+    margin-bottom: 64px;
+  }
+
+  :has(.c-page-kv__image-wrap) & {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include g.mq() {
+      flex: 1;
+      gap: 12px;
+      order: 1;
+      margin-top: 24px;
+    }
+
+    @include g.mq(lg) {
+      gap: 16px;
+    }
+  }
+}
+
+.c-page-kv__data-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-page-kv__labels {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.c-page-kv__label-en {
+  font-family: var(--font-family-en);
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--color-font-primary);
+
+  @include g.mq() {
+    font-size: g.clamp-vw(20, 24, 768, 1440);
+  }
+}
+
+.c-page-kv__label-ja {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-font-light-base);
+
+  @include g.mq() {
+    font-size: g.clamp-vw(16, 18, 768, 1440);
+  }
+}
+
+.c-page-kv__data {
+  font-family: var(--font-family-en);
+  font-size: 17px;
+}
+
+.c-page-kv__title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 28px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    gap: 16px;
+    font-size: g.clamp-vw(24, 44, 768, 1440);
+  }
+}
+
+.c-page-kv__title-en {
+  font-family: var(--font-family-en);
+  font-size: 50px;
+  line-height: 1.16;
+  color: var(--color-font-primary);
+
+  @include g.mq() {
+    font-size: 56px;
+  }
+
+  @include g.mq(lg) {
+    font-size: 72px;
+  }
+}
+
+.c-page-kv__title-ja {
+  font-size: 15px;
+  line-height: 1.5;
+
+  @include g.mq() {
+    font-size: 18px;
+  }
+}
+
+.c-page-kv__image-wrap {
+  @include g.mq() {
+    position: relative;
+    order: 2;
+    width: g.clamp-vw(300, 484, 768, 1440);
+  }
+}
+
+.c-page-kv__image-amount {
+  order: 1;
+  aspect-ratio: 338 / 169;
+  overflow: hidden;
+  border: 1px solid #dcdcdc;
+  border-radius: 0 0 0 56px;
+
+  @include g.mq() {
+    position: absolute;
+    right: 0;
+    bottom: -48px;
+    aspect-ratio: 484 / 323;
+  }
+
+  @include g.mq(lg) {
+    bottom: -80px;
+  }
+}
+
+.c-page-kv__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

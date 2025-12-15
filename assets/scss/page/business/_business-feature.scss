@@ -1,0 +1,91 @@
+@use "../../global" as g;
+
+/*!
+page > business > business-feature
+------------------------------
+*/
+.p-business-feature {
+  margin-top: 80px;
+}
+
+.p-business-feature__title {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-business-feature__title-en {
+  font-family: var(--font-family-en);
+  font-size: 16px;
+  line-height: 1.18;
+  color: var(--color-font-primary);
+
+  @include g.mq() {
+    font-size: 20px;
+  }
+}
+
+.p-business-feature__title-ja {
+  font-size: 24px;
+  line-height: 1.45;
+
+  @include g.mq() {
+    font-size: 32px;
+  }
+}
+
+.p-business-feature__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.p-business-feature__item {
+  display: flex;
+  flex-direction: column;
+
+  @include g.mq() {
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+  }
+}
+
+.p-business-feature__figure {
+  aspect-ratio: 340 / 170;
+  overflow: hidden;
+  border-radius: 0 0 0 40px;
+
+  @include g.mq() {
+    max-width: 240px;
+    aspect-ratio: 240 / 160;
+  }
+}
+
+.p-business-feature__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-business-feature__body {
+  flex: 1;
+  margin-top: 16px;
+
+  @include g.mq() {
+    margin-top: 0;
+  }
+}
+
+.p-business-feature__body-title {
+  font-size: 18px;
+  line-height: 1.4;
+
+  @include g.mq() {
+    font-size: 24px;
+  }
+}
+
+.p-business-feature__body-text {
+  margin-top: 10px;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "morisita",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "browser-sync start --proxy 'http://morisita.local/' --files '**/*.php' '**/*.css' '**/*.js' --no-notify --no-open",
+    "sass": "sass assets/scss/:assets/css/ --watch"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "stylelint": "^16.20.0",
+    "stylelint-config-recess-order": "^6.0.0",
+    "stylelint-config-recommended-scss": "^15.0.1"
+  },
+  "dependencies": {
+    "prettier": "^3.5.3",
+    "sass": "^1.89.1"
+  }
+}

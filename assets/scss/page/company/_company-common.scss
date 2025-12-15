@@ -1,0 +1,92 @@
+@use "../../global" as g;
+
+/*!
+page > company
+------------------------------
+*/
+.p-company {
+  padding-block: 80px;
+
+  @include g.mq(lg) {
+    padding-block: 120px;
+  }
+}
+
+.p-company__image-amount {
+  aspect-ratio: 340 / 226;
+  overflow: hidden;
+  border-radius: 0 0 0 32px;
+
+  @include g.mq() {
+    aspect-ratio: 1000 / 500;
+    border-radius: 0 0 0 56px;
+  }
+}
+
+.p-company__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-company__info {
+  margin-top: 40px;
+
+  @include g.mq() {
+    margin-top: 56px;
+  }
+}
+
+.p-company-table {
+  width: 100%;
+  border-top: 1px solid var(--color-bg-light-grey);
+}
+
+.p-company-table__row {
+  display: flex;
+  flex-direction: column;
+  padding-block: 24px;
+  border-bottom: 1px solid var(--color-bg-light-grey);
+
+  @include g.mq() {
+    flex-direction: row;
+    padding-block: 32px;
+  }
+}
+
+.p-company-table__th {
+  font-weight: bold;
+
+  @include g.mq() {
+    width: 224px;
+  }
+}
+
+.p-company-table__td {
+  display: flex;
+  gap: 4px;
+}
+
+.p-company-table__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.p-company-table__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.p-company-table__list-item {
+  position: relative;
+  padding-left: 1em;
+}
+
+.p-company-table__list-item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "・";
+}
