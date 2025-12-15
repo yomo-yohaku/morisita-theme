@@ -23,7 +23,7 @@ npm install
 
 3. package.json の URL を変更
 
-http://localhost:10028 を LocalWP の環境に合わせて変更
+http://morisita.local/ を LocalWP の環境に合わせて変更
 
 ## 開発の開始
 
